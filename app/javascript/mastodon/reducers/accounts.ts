@@ -47,10 +47,10 @@ export const accountsReducer: Reducer<typeof initialState> = (
 ) => {
   const currentUserId = me;
 
-  if (!currentUserId)
-    throw new Error(
-      'No current user (me) defined when calling `accountsReducer`',
-    );
+  // if (!currentUserId)
+  //   throw new Error(
+  //     'No current user (me) defined when calling `accountsReducer`',
+  //   );
 
   if (revealAccount.match(action))
     return state.setIn([action.payload.id, 'hidden'], false);
